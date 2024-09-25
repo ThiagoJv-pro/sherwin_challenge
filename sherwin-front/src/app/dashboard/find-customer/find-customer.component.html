@@ -1,0 +1,28 @@
+<div class="title">
+  <h2>Buscar Cliente</h2>
+</div>
+
+<div class="toggle">
+  <mat-slide-toggle (change)="toggle()" [checked]="isDocument"></mat-slide-toggle>
+  <label>{{isDocument ? 'Documento' : 'ID'}}</label>
+</div>
+
+<div class="form-container">
+
+<form class="form" (ngSubmit)="onSubmit()">
+
+  <mat-form-field class="example-full-width">
+    <mat-label>{{isDocument ? 'Documento' : 'ID'}}</mat-label>
+    <input matInput [(ngModel)]="document" name="document" placeholder="Digite o valor da opção selecionada" required>
+  </mat-form-field>
+  <div class="findButton">
+    <button mat-flat-button type="submit" (click)="onSubmit()">Buscar</button>
+  </div>
+</form>
+
+</div>
+
+<div *ngIf="responseData">
+  <h3>Resultado:</h3>
+  <pre>{{ formatResponse(responseData) }}</pre> <!-- JSON -->
+</div>

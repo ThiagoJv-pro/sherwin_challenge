@@ -1,0 +1,33 @@
+<div class="container">
+  <h2>Lista de Clientes</h2>
+
+  <button mat-raised-button (click)="onSubmit()">Carregar Clientes</button>
+
+  <div *ngIf="customers.length > 0">
+    <h3>Clientes:</h3>
+    <ul>
+      <li *ngFor="let customer of customers">
+        <strong>ID:</strong> {{ customer.id }}<br>
+        <strong>Razão Social:</strong> {{ customer.socialReason }}<br>
+        <strong>Nome Fantasia:</strong> {{ customer.fantasyName }}<br>
+
+        <strong>Identidade:</strong>
+        <div *ngIf="customer.identity">
+          <div *ngIf="customer.identity.type">Tipo: {{ customer.identity.type }}</div>
+          <div *ngIf="customer.identity.identity">Documento: {{ customer.identity.identity }}</div>
+        </div>
+        <div *ngIf="!customer.identity">
+          Não disponível
+        </div>
+
+        <strong>Telefone:</strong> {{ customer.phone }}<br>
+        <strong>Ativo:</strong> {{ customer.isActive ? 'Sim' : 'Não' }}<br>
+        <hr>
+      </li>
+    </ul>
+  </div>
+
+  <div *ngIf="customers.length === 0">
+    <p>Nenhum cliente encontrado.</p>
+  </div>
+</div>

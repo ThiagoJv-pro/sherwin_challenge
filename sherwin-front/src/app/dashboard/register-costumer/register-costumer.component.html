@@ -1,0 +1,42 @@
+<div class="title">
+  <h2>Cadastrar Cliente</h2>
+</div>
+
+
+<div class="form-container">
+
+<form class="form" (ngSubmit)="onSubmit()">
+
+  
+  <mat-form-field>
+    <mat-label>Razão Social</mat-label>
+    <input matInput [(ngModel)]="data.socialReason" name="socialReason" required>
+  </mat-form-field>
+ 
+  <mat-form-field>
+    <mat-label>Nome Fantasia</mat-label>
+    <input matInput [(ngModel)]="data.fantasyName" name="fantasyName" required>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>CNPJ/CPF</mat-label>
+    <input matInput [(ngModel)]="data.document" name="document" required>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Telefones de contato</mat-label>
+    <input matInput [(ngModel)]="data.phone" name="phone" required>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>isActive</mat-label>
+    <input matInput [(ngModel)]="data.isActive" name="isActive" required>
+  </mat-form-field>
+  
+  <label> ID: {{registrationId}} </label>
+
+  <div class="save-button">
+    <button mat-flat-button type="submit">Salvar</button>
+  </div>
+</form>
+</div>

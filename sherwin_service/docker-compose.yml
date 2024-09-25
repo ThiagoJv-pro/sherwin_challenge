@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+
+  sherwin-service:
+    image: mining-service 
+    build:
+      context: .
+      dockerfile: ./sherwin-service/infrastructure/Dockerfile
+    ports:
+      - "8080:8080"
+
+  postgres-sherwin-service:
+    image: postgres
+    environment:
+      POSTGRES_USERNAME: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"
+
+  

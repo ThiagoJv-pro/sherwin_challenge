@@ -1,0 +1,38 @@
+.form-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: auto; 
+  }
+  
+  .title{
+    display: flex;
+    justify-content: center;
+    height: auto; 
+    margin-top: 5%;
+    margin-bottom: 50px;
+  }
+  .form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  .toggle{
+    display: flex;
+    justify-content: center;
+    height: auto; 
+    margin-bottom: 50px;
+  }
+
+  .findButton{
+    display: flex;
+    justify-content: center;
+    height: auto; 
+    margin-bottom: 50px;
+  }
+  
