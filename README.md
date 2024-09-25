@@ -1,6 +1,6 @@
 Desafio: Desenvolvimento de Aplicação Web para Cadastro e Consulta de Clientes
 
-Neste projeto, fui responsável pela  construção de um projeto para uma pequena empresa que precisava de uma aplicação web para cadastro e consulta de clientes. A aplicação foi desenvolvida utilizando alguns principios de design, DDD, clean architecture e vale destacar as seguintes tecnologias:
+Neste desafio, fui responsável pela  construção de um projeto para uma pequena empresa que precisava de uma aplicação web para cadastro e consulta de clientes. A aplicação foi desenvolvida utilizando alguns principios de design, DDD, clean architecture e vale destacar as seguintes tecnologias:
 
 Frontend: Angular, para a criação da interface de usuário dinâmica e responsiva.
 Backend: Java com Spring Boot, oferecendo uma API REST para comunicação com o frontend.
