@@ -3,7 +3,7 @@ version: '3.8'
 services:
 
   sherwin-service:
-    image: mining-service 
+    image: sherwin-service 
     build:
       context: .
       dockerfile: ./sherwin-service/infrastructure/Dockerfile
