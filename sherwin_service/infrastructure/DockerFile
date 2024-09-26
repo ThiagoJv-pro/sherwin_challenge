@@ -3,12 +3,12 @@ FROM maven:3.8.4-openjdk-17 AS build
 WORKDIR /app
 
 # Copie o POM principal
-COPY mining-service/pom.xml .
+COPY sherwin_service/pom.xml .
 
 # Copie todos os módulos
-COPY mining-service/application ./application
-COPY mining-service/domain ./domain
-COPY mining-service/infrastructure ./infrastructure
+COPY sherwin_service/application ./application
+COPY sherwin_service/domain ./domain
+COPY sherwin_service/infrastructure ./infrastructure
 
 # Baixar dependências e construir o projeto
 RUN mvn clean install -DskipTests
