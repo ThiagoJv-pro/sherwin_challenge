@@ -24,5 +24,9 @@ Spring Boot com Tomcat embutido;
 Hibernate e JPA para mapeamento e persistência de dados;
 Angular para construção do frontend.
 
-https://github.com/user-attachments/assets/b7ecad73-9ce9-4da8-8e2f-fe79527412a4
+
+
+
+https://github.com/user-attachments/assets/a25848a3-40d2-4cc2-8869-fc52849b5aeb
+
 
