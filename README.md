@@ -27,6 +27,6 @@ Angular para construção do frontend.
 
 
 
-https://github.com/user-attachments/assets/a25848a3-40d2-4cc2-8869-fc52849b5aeb
+https://github.com/user-attachments/assets/5e1c5a0a-14f1-41f1-90b2-02fcdb76bb22
 
 
