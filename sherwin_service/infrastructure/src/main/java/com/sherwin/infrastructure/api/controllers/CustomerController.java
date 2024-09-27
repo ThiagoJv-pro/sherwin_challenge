@@ -15,6 +15,7 @@ import com.sherwin.domain.customer.CustomerId;
 import com.sherwin.infrastructure.api.CustomerApi;
 import com.sherwin.infrastructure.configuration.useCases.CustomerUseCaseConfig;
 import com.sherwin.infrastructure.customer.model.CreateClientRequest;
+import com.sherwin.infrastructure.customer.model.CreateCustomerResponse;
 import com.sherwin.infrastructure.customer.model.FindAllCustomersRequest;
 import com.sherwin.infrastructure.customer.model.FindByCustomerDocumentRequest;
 import com.sherwin.infrastructure.customer.model.FindByCustomerIdRequest;
@@ -43,8 +44,10 @@ public class CustomerController implements CustomerApi {
             final var executeCommand  = this.customerUseCaseConfig
                 .createCustomerUseCase()
                 .execute(createCommand);
-    
-            return ResponseEntity.ok(executeCommand);
+            
+            return ResponseEntity.status(HttpStatus.CREATED)
+                .body(new CreateCustomerResponse(executeCommand.id(), "Cliente cadastrado com sucesso"));
+                
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao cadastrar novo cliente: " + e.getMessage());
         }

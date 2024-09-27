@@ -21,8 +21,30 @@
 </form>
 
 </div>
-
-<div *ngIf="responseData">
+<div class="container">
   <h3>Resultado:</h3>
-  <pre>{{ formatResponse(responseData) }}</pre> <!-- JSON -->
+  <ul *ngIf="responseData">
+
+    <li>
+      <strong>ID:</strong> {{ responseData.id }}<br>
+      <strong>Razão Social:</strong> {{ responseData.socialReason }}<br>
+      <strong>Nome Fantasia:</strong> {{ responseData.fantasyName }}<br>
+
+      <strong>Identidade:</strong>
+      <div *ngIf="responseData.identity">
+        <div *ngIf="responseData.identity.type">Tipo: {{ responseData.identity.type }}</div>
+        <div *ngIf="responseData.identity.identity">Documento: {{ responseData.identity.identity }}</div>
+      </div>
+      <div *ngIf="!responseData.identity">
+        Não disponível
+      </div>
+
+      <strong>Telefone:</strong> {{ responseData.phone }}<br>
+      <strong>Ativo:</strong> {{ responseData.isActive ? 'Sim' : 'Não' }}<br>
+      <hr>
+    </li>
+  </ul>
 </div>
+
+
+

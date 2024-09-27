@@ -6,12 +6,13 @@ services:
     image: sherwin-service 
     build:
       context: .
-      dockerfile: ./sherwin-service/infrastructure/Dockerfile
+      dockerfile: ./infrastructure/Dockerfile
     ports:
       - "8080:8080"
 
-  postgres-sherwin-service:
+  postgres:
     image: postgres
+    container_name: postgres
     environment:
       POSTGRES_USERNAME: postgres
       POSTGRES_PASSWORD: postgres
