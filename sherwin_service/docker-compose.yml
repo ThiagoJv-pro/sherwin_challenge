@@ -4,8 +4,6 @@ services:
 
   sherwin-service:
     image: sherwin-service 
-    depends_on:
-      - postgres
     build:
       context: .
       dockerfile: ./infrastructure/Dockerfile
