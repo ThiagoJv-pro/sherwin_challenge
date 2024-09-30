@@ -21,8 +21,6 @@ Ferramentas utilizadas:
 
 Maven para gerenciamento de dependências e build;
 Spring Boot com Tomcat embutido;
-Hibernate e JPA para mapeamento e persistência de dados;
-Angular para construção do frontend.
 
 
 
